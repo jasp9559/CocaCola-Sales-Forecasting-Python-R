@@ -24,13 +24,13 @@ h.	Similarly we check the Holt’s method, Holt’s Winter method with additive 
 
 i.	The MAPE are as follows:
       
-			Simple Exponential Smoothing	17.04
+	Simple Exponential Smoothing	17.04
       
-			Holt’s Method	102.40
+	Holt’s Method	102.40
       
-			Holt’s Winter method with additive seasonality	11.73
+	Holt’s Winter method with additive seasonality	11.73
       
-			Holt’s Winter method with multiplicative seasonality	14.99
+	Holt’s Winter method with multiplicative seasonality	14.99
 
 j.	We see that the Holt’s winter method with additive seasonality gives us the least error.
 
@@ -53,23 +53,23 @@ r.	Now we split the data into train and test and start building models viz, Line
 
 s.	To build the above models we  use OLS, i.e Ordinary Least square formula from statsmodel.formula as under:
 
-Linear	Sms.ols	Sales ~ t	260.93
+	Linear	Sms.ols	Sales ~ t	260.93
 
-Exponential	Sms.ols	Log_Sales ~ t	268.69
+	Exponential	Sms.ols	Log_Sales ~ t	268.69
 
-Quadratic	Sms.ols	Sales ~ t + t_square	297.40
+	Quadratic	Sms.ols	Sales ~ t + t_square	297.40
 
-Additive Seasonality	Sms.ols	Sales ~ months (i.e seasons)	235.60
+	Additive Seasonality	Sms.ols	Sales ~ months (i.e seasons)	235.60
 
-Additive Seasonality with linear trend	Sms.ols	Sales ~ t + months	135.55
+	Additive Seasonality with linear trend	Sms.ols	Sales ~ t + months	135.55
 
-Additive Seasonality with Quadratic trend	Sms.ols	Sales ~ t + t_square + months	218.19
+	Additive Seasonality with Quadratic trend	Sms.ols	Sales ~ t + t_square + months	218.19
 
-Multiplicative Seasonality	Sms.ols	log_Sales ~ months	239.65
+	Multiplicative Seasonality	Sms.ols	log_Sales ~ months	239.65
 
-Multiplicative Seasonality with Linear Trend	Sms.ols	log_Sales ~ t + months	160.68
+	Multiplicative Seasonality with Linear Trend	Sms.ols	log_Sales ~ t + months	160.68
 
-Multiplicative Seasonality with Quadratic Trend	Sms.ols	log_Sales ~ t + t_square + months	239.60
+	Multiplicative Seasonality with Quadratic Trend	Sms.ols	log_Sales ~ t + t_square + months	239.60
 
 t.	We notice that the model with Additive seasonality having a linear trend gives the least RMSE value i.e, least error. If we look back, we had seen in the plot and adviced that the time series plot and the seasonal decomposition plot both showed that the linear trend and the additive seasonality was our assumption. It has been now proved right with the calculations giving the least RMSE values.
 
